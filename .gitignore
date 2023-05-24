@@ -133,3 +133,4 @@ dist
 example.json
 .vscode
 *.session.sql
+*.csv*

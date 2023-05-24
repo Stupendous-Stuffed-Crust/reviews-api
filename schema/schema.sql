@@ -11,14 +11,23 @@ CREATE TABLE IF NOT EXISTS reviewsList.review
 	  id SERIAL PRIMARY KEY,
     review_id integer,
     rating integer,
-    summary character varying(60) COLLATE pg_catalog."default",
+    summary character varying(60),
     recommend boolean DEFAULT false,
-    response text COLLATE pg_catalog."default",
-    body text COLLATE pg_catalog."default",
-    date character varying(30) COLLATE pg_catalog."default",
-    reviewer_name character varying(30) COLLATE pg_catalog."default",
+    response text,
+    body text,
+    date character varying(30),
+    reviewer_name character varying(30),
     helpfulness integer DEFAULT 0,
-    photos integer[]
+    photos integer
+)
+
+TABLESPACE pg_default;
+
+CREATE TABLE IF NOT EXISTS reviewsList.photos
+(
+	  id SERIAL PRIMARY KEY,
+    review_id FOREIGN KEY,
+    url text,
 )
 
 TABLESPACE pg_default;
