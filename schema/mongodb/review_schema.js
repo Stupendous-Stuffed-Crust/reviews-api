@@ -6,7 +6,7 @@ const ReviewSchema = new Schema({
     type: Number,
     required: true
   },
-  review_id: {
+  product_id: {
     type: Number,
     required: true
   },
@@ -14,46 +14,38 @@ const ReviewSchema = new Schema({
     type: Number,
     required: true
   },
+  date: {
+    type: String,
+    required: true
+  }
   summary: {
     type: String,
     required: true
   },
-  recommend: {
-    type: Boolean,
-    required: true
-  },
-  response: {
-    type: String,
-    required: false
-  },
   body: {
     type: String,
     required: true
-  },
-  data: {
-    type: String,
+  }
+  recommend: {
+    type: Boolean,
     required: true
   },
   reviewer_name: {
     type: String,
     required: true
   },
+  reviewer_email: {
+    type: String,
+    required: true
+  }
+  response: {
+    type: String,
+    required: false
+  },
   helpfulness {
     type: Number,
     required: true
-  },
-  photos: [
-    {
-      id: {
-        type: Number,
-        required: true
-      },
-      url: {
-        type: String,
-        required: true
-      }
-    }
-  ]
+  }
 });
 
 const Review = mongoose.model("Review", ReviewSchema);
