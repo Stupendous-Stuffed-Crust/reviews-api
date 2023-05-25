@@ -8,7 +8,3 @@ CREATE TABLE IF NOT EXISTS reviewsList.photo
     review_id INT NOT NULL,
     url TEXT NOT NULL
 );
-
-COPY reviewsList.photo
-FROM '/tmp/postgres/csvs/reviews_photos.csv'
-DELIMITER ',' CSV HEADER;

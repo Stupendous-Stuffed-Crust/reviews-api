@@ -18,7 +18,3 @@ CREATE TABLE IF NOT EXISTS reviewsList.review
     helpfulness INT DEFAULT 0 NOT NULL
 )
 TABLESPACE pg_default;
-
-COPY reviewsList.review
-FROM '/tmp/postgres/csvs/reviews.csv'
-DELIMITER ',' CSV HEADER;
