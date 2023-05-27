@@ -9,13 +9,6 @@ const router = require('./routes');
 // Middleware
 app.use(morgan('dev'));
 
-// app.get('/api/reviews', (request, response) => {
-//   pool
-//   .query('EXPLAIN (ANALYZE, COSTS OFF, TIMING OFF) SELECT * from review where product_id=1')
-//   .then((res) => {response.status(200).send(res.rows)})
-//   .catch((err) => response.status(500).send('Error executing query: ' + err.stack));
-// })
-
 app.use('/', router);
 
 app.use(express.static(path.join(__dirname, '../public')));
