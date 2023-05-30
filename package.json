@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "test": "jest --detectOpenHandles",
-    "lint": "eslint"
+    "lint": "eslint",
+    "k6": "k6 run server/k6_tests/script.js"
   },
   "repository": {
     "type": "git",
