@@ -1,5 +1,5 @@
-const controller = require('./controllers');
 const router = require('express').Router();
+const controller = require('./controllers');
 
 router.get('/reviews', controller.getReviews);
 router.get('/reviews/photos', controller.getReviewsPhotos);
