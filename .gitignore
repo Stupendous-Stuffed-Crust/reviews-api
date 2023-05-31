@@ -134,3 +134,4 @@ example.json
 .vscode
 *.session.sql
 csvs
+scrap.js
