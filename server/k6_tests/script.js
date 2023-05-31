@@ -7,6 +7,7 @@ export const options = {
 };
 
 export default function () {
-  http.get('http://localhost:3000/reviews?product_id=998999');
+  const productId = Math.floor(Math.random() * 1000011);
+  http.get(`http://localhost:3000/reviews?product_id=${productId}`);
   sleep(1);
 }
