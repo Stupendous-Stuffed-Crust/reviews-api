@@ -7,6 +7,7 @@ require('dotenv').config();
 function createServer() {
   const app = express();
   app.use(morgan('dev'));
+  app.use(express.urlencoded({ extended: true }));
 
   app.use('/', router);
 

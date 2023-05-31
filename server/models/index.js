@@ -38,4 +38,32 @@ module.exports = {
     };
     return pool.query(query);
   },
+  addReview(
+    product_id,
+    rating,
+    summary,
+    body,
+    recommend,
+    reviewer_name,
+    reviewer_email,
+  ) {
+    const query = {
+      name: 'post-review',
+      text: 'INSERT INTO review (product_id, rating, date, summary, body, recommend, reported, reviewer_name, reviewer_email, response, helpfulness) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11);',
+      values: [
+        product_id,
+        rating,
+        Date.now(),
+        summary,
+        body,
+        recommend,
+        false,
+        reviewer_name,
+        reviewer_email,
+        null,
+        0,
+      ],
+    };
+    return pool.query(query);
+  },
 };
