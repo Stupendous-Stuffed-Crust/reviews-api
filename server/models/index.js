@@ -4,8 +4,7 @@ module.exports = {
   getReviews(product_id, sortBy = 'id', limit = 5, page = 1) {
     const query = {
       name: 'fetch-product-reviews',
-      text:
-        `SELECT * from review
+      text: `SELECT * from review
         WHERE product_id=$1
         ORDER BY ${sortBy} ${sortBy === 'id' ? 'ASC' : 'DESC'}
         LIMIT $2
@@ -45,7 +44,7 @@ module.exports = {
     body,
     recommend,
     reviewer_name,
-    reviewer_email,
+    reviewer_email
   ) {
     const query = {
       name: 'post-review',

@@ -135,3 +135,5 @@ example.json
 *.session.sql
 csvs
 scrap.js
+*.sh
+.prettierrc
