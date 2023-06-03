@@ -13,7 +13,7 @@ module.exports = {
     };
     return pool.query(query);
   },
-    getReviewsPhotos(product_id) {
+  getReviewsPhotos(product_id) {
     const query = {
       name: 'fetch-reviews-photos',
       text: 'SELECT photo.* FROM photo INNER JOIN review ON photo.review_id=review.id WHERE review.product_id=$1;',
@@ -21,4 +21,4 @@ module.exports = {
     };
     return pool.query(query);
   },
-},
+};
